@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from superlists.lists import views as lsviews
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # ~ url(r'^admin/', admin.site.urls),
+    url(r'^$', lsviews.home_page, name='home')
 ]
