@@ -20,5 +20,6 @@ from superlists.lists import views as lsviews
 
 urlpatterns = [
     # ~ url(r'^admin/', admin.site.urls),
-    url(r'^$', lsviews.home_page, name='home')
+    url(r'^$', lsviews.home_page, name='home'),
+    url(r'^lists/the-only-list-in-the-world/$', lsviews.view_list, name='view_list'),
 ]
