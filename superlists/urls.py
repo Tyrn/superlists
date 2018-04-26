@@ -21,6 +21,7 @@ from superlists.lists import views as lsviews
 urlpatterns = [
     # ~ url(r'^admin/', admin.site.urls),
     url(r'^$', lsviews.home_page, name='home'),
-    url(r'^lists/(.+)/$', lsviews.view_list, name='view_list'),
+    url(r'^lists/(\d+)/$', lsviews.view_list, name='view_list'),
+    url(r'^lists/(\d+)/add_item$', lsviews.add_item, name='add_item'),
     url(r'^lists/new$', lsviews.new_list, name='new_list'),
 ]
